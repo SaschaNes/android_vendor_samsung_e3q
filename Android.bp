@@ -16,6 +16,50 @@ soong_namespace {
 }
 
 cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.AGMIPC@1.0-impl",
+    check_elf_files: false,
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.hardware.AGMIPC@1.0-impl.so",
+            ]
+        },
+    },
+    compile_multilib: "64",
+    installable: true,
+    prefer: true,
+    soc_specific: true,
+}
+
+
+cc_prebuilt_library_shared {
+    name: "audio.primary.pineapple",
+    check_elf_files: false,
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/hw/audio.primary.pineapple.so",
+            ]
+        },
+    },
+    compile_multilib: "64",
+    stem: "audio.primary.pineapple",
+    relative_install_path: "hw",
+    installable: true,
+    prefer: true,
+    soc_specific: true,
+}
+
+
+cc_prebuilt_library_shared {
     name: "SWPD_libTsAf",
     owner: "samsung",
     strip: {
