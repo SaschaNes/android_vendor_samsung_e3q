@@ -12,6 +12,40 @@ soong_namespace {
 }
 
 cc_prebuilt_library_shared {
+    name: "android.hardware.security.keymint-V3-ndk.so",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/android.hardware.security.keymint-V3-ndk.so",
+            ],
+        },
+    },
+    system_ext_specific: true,
+}
+
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.security.keymint-V1-ndk",
+    owner: "samsung",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/android.hardware.security.keymint-V1-ndk.so",
+            ],
+        },
+    },
+    system_ext_specific: true,
+}
+
+
+cc_prebuilt_library_shared {
     name: "lib_SoundBooster_ver2000",
     owner: "samsung",
     strip: {
